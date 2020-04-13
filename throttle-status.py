@@ -40,7 +40,7 @@ def parseHexValue(hexValue):
    return result
 
 def processBinaryStatus(binary):
-   print(binary)
+   print("\n\n" + binary)
    rows = 0
 
    errs = {}
@@ -62,6 +62,7 @@ def processBinaryStatus(binary):
             result = result + " "
       errs.pop(max(errs.keys()))
       print(result)
+   print("\n\n")
 
 parser = argparse.ArgumentParser(description="Raspberry Pi throttling status report.")
 parser.add_argument("--hex", nargs="?", type=str, help="Prints a text-based throttling status by hex value.")
