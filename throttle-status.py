@@ -36,7 +36,7 @@ queryStatus = ["vcgencmd", "get_throttled"]
 def parseHexValue(hexValue):
    result = str()
    for i in hexValue:
-       result = result + (hex2bin_map.get(i))
+       result = result + (hex2bin_map.get(i.upper()))
    return result
 
 def processBinaryStatus(binary):
@@ -77,7 +77,7 @@ if args.hex:
         print("\nERROR: Could not parse hex value. Make sure you entered the argument in the proper format: 0x*****\n")
         parser.print_help()
 elif args.get:
-    process = subprocess.run(queryStatus, shell=True, capture_output=True)
+    process = subprocess.run(queryStatus, capture_output=True)
     if (process.returncode == 0):
         response = process.stdout.decode('ascii').strip().split("=")[1][2:]
         processBinaryStatus(parseHexValue(response))
