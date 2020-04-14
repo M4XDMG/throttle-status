@@ -21,7 +21,7 @@ The console output displaying the results in the following format:
 ```
 
 ```
-111100000000000001010
+111100000000000001111
 ||||             ||||_ under-voltage
 ||||             |||_ currently throttled
 ||||             ||_ arm frequency capped
