@@ -27,7 +27,7 @@ err_map = {
    0: "soft temperature reached since last reboot",
    1: "arm frequency capped has occurred since last reboot",
    2: "throttling has occurred since last reboot",
-   3: "soft temperature reached",
+   3: "under-voltage has occurred since last reboot",
    16: "soft temperature reached",
    17: "arm frequency capped",
    18: "currently throttled",
